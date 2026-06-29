@@ -429,8 +429,7 @@ class MemoryChallenge {
             this.startLevel();
         };
         document.getElementById('restart-btn').onclick = () => {
-            this.currentLevelIndex = 0;
-            this.score = 0;
+            this.score = this.scoreBeforeLevel || 0;
             this.startLevel();
         };
         document.querySelector('.logo-area').onclick = (e) => {
@@ -447,6 +446,7 @@ class MemoryChallenge {
                 level: this.currentLevelIndex + 1
             };
         }
+        this.scoreBeforeLevel = this.score;
         this.matchedPairs = 0;
         this.flippedCards = [];
         this.timeLeft = config.time;
