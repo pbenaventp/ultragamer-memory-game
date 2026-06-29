@@ -1,0 +1,17 @@
+{
+  "name": "ultragamer-memory-match",
+  "version": "1.0.0",
+  "description": "Ultragamer Memory Match Premium Minigame",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npx -y serve ."
+  },
+  "devDependencies": {
+    "clean-css": "^5.3.3",
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "javascript-obfuscator": "^5.4.2",
+    "terser": "^5.47.1"
+  }
+}

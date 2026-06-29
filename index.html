@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultragamer Memory Challenge | Intel & El Corte Inglés</title>
+    <link rel="icon" type="image/svg+xml" href="assets/img/logos/logo_cards.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+    <div class="hud">
+        <div class="hud-group">
+            <div class="ultragamer-badge badge-blue" id="hud-level-badge" title="Triple click para ajustes">
+                <span class="label" id="lbl-hud-level"></span>
+                <span id="level-val" class="value">1</span>
+            </div>
+            <div class="ultragamer-badge badge-green" id="hud-score-badge">
+                <span class="label" id="lbl-hud-score"></span>
+                <span id="score-val" class="value">0</span>
+            </div>
+        </div>
+
+        <div class="timer-area">
+            <div id="timer-text">00:00</div>
+            <div id="timer-container">
+                <div id="timer-bar"></div>
+            </div>
+        </div>
+
+        <div class="logo-area">
+            <img src="assets/img/logos/logo_ingame.svg" alt="Intel + El Corte Inglés" class="sponsor-logo">
+        </div>
+    </div>
+
+    <div id="game-board"></div>
+
+    <div id="feedback-text"></div>
+
+    <div id="initial-screen" class="overlay">
+        <div class="modal state-loading" id="main-modal">
+            <div class="brand-group" id="brand-group">
+                <img src="assets/img/logos/main_logo.svg" alt="Ultragamer" class="modal-logo">
+            </div>
+
+            <div class="modal-content-area">
+                <div id="loading-ui" class="ui-part">
+                    <div class="tech-loading-text" id="lbl-loading-title"></div>
+                    <div class="loading-bar-wrapper">
+                        <div id="loading-bar"></div>
+                    </div>
+                    <div id="loading-text">0%</div>
+                </div>
+
+                <div id="start-ui" class="ui-part hidden stagger-in">
+                    <h1 id="lbl-game-title"></h1>
+                    <p id="lbl-game-desc"></p>
+                    <button id="start-btn" class="btn"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over-screen" class="overlay hidden">
+        <div class="modal">
+            <img src="assets/img/logos/main_logo.svg" alt="Ultragamer" class="modal-logo">
+            <h2 id="result-title"></h2>
+            <p class="score-label" id="lbl-score-label"></p>
+            <h1 id="final-score">0</h1>
+            <button id="restart-btn" class="btn"></button>
+        </div>
+    </div>
+
+    <div id="settings-screen" class="overlay hidden">
+        <div class="modal">
+            <h2 class="settings-title" id="lbl-settings-title"></h2>
+            <div id="settings-fields"></div>
+            <div class="settings-buttons">
+                <button id="save-settings-btn" class="btn"></button>
+                <button id="reset-settings-btn" class="btn btn-secondary"></button>
+                <button id="close-settings-btn" class="btn btn-dark"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="strings.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
