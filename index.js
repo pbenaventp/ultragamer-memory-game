@@ -117,7 +117,7 @@ const ULTRAGAMER_CARDS = [
 ];
 
 const DEFAULT_LEVELS = [
-    { level: 1, pairs: 3, grid: 'grid-3x2', time: 20 },
+    { level: 1, pairs: 3, grid: 'grid-3x2', time: 10 },
     { level: 2, pairs: 4, grid: 'grid-4x2', time: 25 },
     { level: 3, pairs: 6, grid: 'grid-4x3', time: 40 },
     { level: 4, pairs: 8, grid: 'grid-4x4', time: 50 },
@@ -682,7 +682,7 @@ class MemoryChallenge {
                     <label style="font-weight: 700;">Nivel ${lvl.level === 5 ? '5+' : lvl.level}:</label>
                     <span id="val-display-${i}" style="font-weight: 900; color: var(--col-light-green); font-size: 1.15rem;">${lvl.time}s</span>
                 </div>
-                <input type="range" min="10" max="90" step="1" value="${lvl.time}" data-index="${i}" 
+                <input type="range" min="5" max="90" step="1" value="${lvl.time}" data-index="${i}" 
                     style="width: 100%; cursor: pointer;"
                     oninput="document.getElementById('val-display-${i}').textContent = this.value + 's'">
             `;
@@ -696,7 +696,7 @@ class MemoryChallenge {
         const inputs = document.querySelectorAll('#settings-fields input');
         inputs.forEach(input => {
             const index = parseInt(input.dataset.index);
-            this.levels[index].time = parseInt(input.value) || 10;
+            this.levels[index].time = parseInt(input.value) || 5;
         });
         localStorage.setItem('ultragamer_memory_levels', JSON.stringify(this.levels));
 

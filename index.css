@@ -186,7 +186,7 @@ body.game-active #game-board {
     background: #18181cd9;
     border: none;
     border-radius: 20px 0 0 20px;
-    padding: 16px 80px 16px 36px;
+    padding: 12px 80px 12px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -195,7 +195,7 @@ body.game-active #game-board {
 }
 
 .sponsor-logo {
-    height: 52px;
+    height: 42px;
     width: auto;
     filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.15));
 }
