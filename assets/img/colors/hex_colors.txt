@@ -1,0 +1,9 @@
+COLORES:
+
+- Verde oscuro: #264534
+- Verde claro: #78bf89
+
+- Azul Oscuro: #31748f
+- Azul Claro:  #3abff0
+
+- Black: #1d1d1d
