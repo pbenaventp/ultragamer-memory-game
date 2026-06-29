@@ -439,7 +439,14 @@ class MemoryChallenge {
     }
 
     startLevel() {
-        const config = this.levels[this.currentLevelIndex];
+        let config = this.levels[this.currentLevelIndex];
+        if (!config) {
+            const lastConfig = this.levels[this.levels.length - 1];
+            config = {
+                ...lastConfig,
+                level: this.currentLevelIndex + 1
+            };
+        }
         this.matchedPairs = 0;
         this.flippedCards = [];
         this.timeLeft = config.time;
@@ -542,7 +549,8 @@ class MemoryChallenge {
             this.flippedCards = [];
             this.sounds.play('match');
 
-            if (this.matchedPairs === this.levels[this.currentLevelIndex].pairs) {
+            const config = this.levels[this.currentLevelIndex] || this.levels[this.levels.length - 1];
+            if (this.matchedPairs === config.pairs) {
                 this.isPlaying = false;
                 clearInterval(this.timerInterval);
                 setTimeout(() => this.nextLevel(), 450);
@@ -570,23 +578,14 @@ class MemoryChallenge {
 
     nextLevel() {
         const nextLevelNum = this.currentLevelIndex + 2;
-        if (nextLevelNum <= this.levels.length) {
-            this.showFeedback(this._t('feedbackLvl', { lvl: nextLevelNum }));
-            this.sounds.play('levelup');
-            this.els.timerBar.style.transition = 'width 0.8s ease-out';
-            this.els.timerBar.style.width = '100%';
-        } else {
-            this.showFeedback(this._t('feedbackWin'));
-            this.sounds.play('levelup');
-        }
+        this.showFeedback(this._t('feedbackLvl', { lvl: nextLevelNum }));
+        this.sounds.play('levelup');
+        this.els.timerBar.style.transition = 'width 0.8s ease-out';
+        this.els.timerBar.style.width = '100%';
 
         setTimeout(() => {
-            if (this.currentLevelIndex < this.levels.length - 1) {
-                this.currentLevelIndex++;
-                this.startLevel();
-            } else {
-                this.gameOver(this._t('resultTitleWin'));
-            }
+            this.currentLevelIndex++;
+            this.startLevel();
         }, 800);
     }
 
@@ -623,7 +622,7 @@ class MemoryChallenge {
     }
 
     updateTimerUI() {
-        const config = this.levels[this.currentLevelIndex];
+        const config = this.levels[this.currentLevelIndex] || this.levels[this.levels.length - 1];
         const pct = (this.timeLeft / config.time) * 100;
         this.els.timerBar.style.width = `${Math.max(0, pct)}%`;
 
@@ -680,7 +679,7 @@ class MemoryChallenge {
             div.className = 'settings-row';
             div.innerHTML = `
                 <div style="display: flex; justify-content: space-between; align-items: center;">
-                    <label style="font-weight: 700;">Nivel ${lvl.level}:</label>
+                    <label style="font-weight: 700;">Nivel ${lvl.level === 5 ? '5+' : lvl.level}:</label>
                     <span id="val-display-${i}" style="font-weight: 900; color: var(--col-light-green); font-size: 1.15rem;">${lvl.time}s</span>
                 </div>
                 <input type="range" min="10" max="90" step="1" value="${lvl.time}" data-index="${i}" 
