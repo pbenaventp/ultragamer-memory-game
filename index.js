@@ -1,119 +1,14 @@
 const ULTRAGAMER_CARDS = [
-    {
-        id: 'intel-core',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="15" y="15" width="70" height="70" rx="6" stroke="#3abff0" stroke-width="4" fill="#121212" />
-            <rect x="25" y="25" width="50" height="50" rx="3" stroke="#78bf89" stroke-width="3" fill="#1d1d1d" />
-            <path d="M35 15V10M45 15V10M55 15V10M65 15V10" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-            <path d="M35 90V85M45 90V85M55 90V85M65 90V85" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-            <path d="M15 35H10M15 45H10M15 55H10M15 65H10" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-            <path d="M90 35H85M90 45H85M90 55H85M90 65H85" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-            <text x="50" y="47" fill="#3abff0" font-family="'Orbitron', sans-serif" font-weight="900" font-size="12" text-anchor="middle">intel.</text>
-            <text x="50" y="62" fill="#78bf89" font-family="'Orbitron', sans-serif" font-weight="700" font-size="10" text-anchor="middle">CORE</text>
-            <circle cx="50" cy="50" r="28" stroke="#3abff0" stroke-width="1.5" stroke-dasharray="4 3" />
-        </svg>`
-    },
-    {
-        id: 'controller',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25 35C25 30 35 25 50 25C65 25 75 30 75 35C75 45 80 60 70 70C65 75 58 70 50 70C42 70 35 75 30 70C20 60 25 45 25 35Z" stroke="#3abff0" stroke-width="4" fill="#121212" stroke-linejoin="round"/>
-            <path d="M32 45H42M37 40V50" stroke="#78bf89" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="61" cy="42" r="3" fill="#3abff0"/>
-            <circle cx="67" cy="48" r="3" fill="#3abff0"/>
-            <circle cx="58" cy="50" r="3" fill="#3abff0"/>
-            <path d="M47 58H53" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
-        </svg>`
-    },
-    {
-        id: 'vanguard',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="32" width="60" height="26" rx="13" stroke="#3abff0" stroke-width="4" fill="#121212" />
-            <path d="M28 45H72" stroke="#78bf89" stroke-width="2" stroke-dasharray="6 3"/>
-            <circle cx="50" cy="45" r="14" stroke="#fff" stroke-width="1.5"/>
-            <path d="M40 45H60M50 35V55" stroke="#3abff0" stroke-width="1.5"/>
-            <path d="M35 58L42 72H58L65 58" stroke="#3abff0" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <circle cx="28" cy="45" r="2" fill="#78bf89"/>
-            <circle cx="72" cy="45" r="2" fill="#78bf89"/>
-        </svg>`
-    },
-    {
-        id: 'umbral-luz',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="35" stroke="#3abff0" stroke-width="4" fill="#121212"/>
-            <path d="M50 25V50L68 50" stroke="#78bf89" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M42 15H58" stroke="#3abff0" stroke-width="4" stroke-linecap="round"/>
-            <path d="M22 30L14 38" stroke="#78bf89" stroke-width="3" stroke-linecap="round"/>
-            <path d="M78 30L86 38" stroke="#78bf89" stroke-width="3" stroke-linecap="round"/>
-            <path d="M50 65C40 65 32 58 32 50" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M22 65L32 60L28 72L38 67" stroke="#3abff0" stroke-width="2" stroke-linejoin="round"/>
-        </svg>`
-    },
-    {
-        id: 'impacto-total',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="30" stroke="#78bf89" stroke-width="4" fill="#121212" />
-            <circle cx="50" cy="50" r="20" stroke="#3abff0" stroke-width="2" stroke-dasharray="4 4" />
-            <path d="M50 12V28M50 88V72M12 50H28M88 50H72" stroke="#3abff0" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="4" fill="#fff" />
-            <path d="M35 35L42 42M65 65L58 58M65 35L58 42M35 65L42 58" stroke="#78bf89" stroke-width="2" stroke-linecap="round"/>
-        </svg>`
-    },
-    {
-        id: 'codigo-maestro',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="25" y="20" width="50" height="42" rx="4" stroke="#3abff0" stroke-width="4" fill="#121212"/>
-            <path d="M20 62H80L72 82H28L20 62Z" stroke="#78bf89" stroke-width="3" fill="#1d1d1d" stroke-linejoin="round"/>
-            <circle cx="38" cy="72" r="4" fill="#3abff0"/>
-            <circle cx="48" cy="72" r="4" fill="#78bf89"/>
-            <path d="M62 68L68 76" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-            <rect x="35" y="30" width="30" height="20" stroke="#fff" stroke-width="2"/>
-            <path d="M43 40C45 42 47 42 49 40L57 40" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-        </svg>`
-    },
-    {
-        id: 'crosshair',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="32" stroke="#3abff0" stroke-width="3"/>
-            <path d="M50 10V35M50 90V65M10 50H35M90 50H65" stroke="#78bf89" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="50" cy="50" r="8" stroke="#fff" stroke-width="2"/>
-            <circle cx="50" cy="50" r="1.5" fill="#78bf89"/>
-            <path d="M30 30L36 36M70 70L64 64M70 30L64 36M30 70L36 64" stroke="#3abff0" stroke-width="1.5"/>
-        </svg>`
-    },
-    {
-        id: 'mouse',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="32" y="18" width="36" height="64" rx="18" stroke="#3abff0" stroke-width="4" fill="#121212"/>
-            <path d="M50 18V45" stroke="#78bf89" stroke-width="2.5" stroke-linecap="round"/>
-            <rect x="47" y="26" width="6" height="12" rx="3" fill="#fff" stroke="#3abff0" stroke-width="1"/>
-            <path d="M33 50C33 50 38 54 50 54C62 54 67 50 67 50" stroke="#78bf89" stroke-width="2" stroke-linecap="round"/>
-            <path d="M38 74C42 77 46 78 50 78C54 78 58 77 62 74" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-        </svg>`
-    },
-    {
-        id: 'final-boss',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 12L22 34V60L50 88L78 60V34L50 12Z" stroke="#78bf89" stroke-width="4" fill="#121212" stroke-linejoin="round"/>
-            <path d="M35 34H65" stroke="#3abff0" stroke-width="2" stroke-linecap="round"/>
-            <path d="M30 45L40 47" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-            <path d="M70 45L60 47" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="35" cy="46" r="2.5" fill="#3abff0"/>
-            <circle cx="65" cy="46" r="2.5" fill="#3abff0"/>
-            <path d="M42 62H58L50 68L42 62Z" stroke="#78bf89" stroke-width="2.5" fill="#1d1d1d" stroke-linejoin="round"/>
-            <path d="M34 22L42 28M66 22L58 28" stroke="#3abff0" stroke-width="3" stroke-linecap="round"/>
-        </svg>`
-    },
-    {
-        id: 'cup',
-        svg: `<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M28 20H72V38C72 50 62 60 50 60C38 60 28 50 28 38V20Z" stroke="#3abff0" stroke-width="4" fill="#121212" stroke-linejoin="round"/>
-            <path d="M50 60V80M32 80H68" stroke="#78bf89" stroke-width="4" stroke-linecap="round"/>
-            <path d="M28 26H18V38C18 44 23 48 28 48V26Z" stroke="#3abff0" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <path d="M72 26H82V38C82 44 77 48 72 48V26Z" stroke="#3abff0" stroke-width="3" fill="none" stroke-linejoin="round"/>
-            <path d="M42 34L50 26L58 34" stroke="#78bf89" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="50" cy="42" r="3" fill="#fff"/>
-        </svg>`
-    }
+    { id: 'cascos-gaming', src: './assets/img/card_icons/CascosGaming.png' },
+    { id: 'intel-core-logo', src: './assets/img/card_icons/IntelCoreLogo.png' },
+    { id: 'mango-xbox-gaming', src: './assets/img/card_icons/MangoXboxGaming.png' },
+    { id: 'mesa-gaming', src: './assets/img/card_icons/MesaGaming.png' },
+    { id: 'microfono-gaming', src: './assets/img/card_icons/MicrofonoGaming.png' },
+    { id: 'mochila-gaming', src: './assets/img/card_icons/MochilaGaming.png' },
+    { id: 'monitor-gaming', src: './assets/img/card_icons/MonitorGaming.png' },
+    { id: 'omen-portatil', src: './assets/img/card_icons/OmenPortatil.png' },
+    { id: 'raton-gaming', src: './assets/img/card_icons/RatonGaming.png' },
+    { id: 'silla-gaming', src: './assets/img/card_icons/SillasGaming.png' }
 ];
 
 const DEFAULT_LEVELS = [
@@ -387,7 +282,8 @@ class MemoryChallenge {
             './assets/img/logos/main_logo.svg',
             './assets/img/logos/logo_ingame.svg',
             './assets/img/logos/logo_cards.svg',
-            './assets/img/bg/background.png'
+            './assets/img/bg/background.png',
+            ...ULTRAGAMER_CARDS.map(c => c.src)
         ];
 
         let loaded = 0;
@@ -502,7 +398,7 @@ class MemoryChallenge {
                 <img src="./assets/img/logos/logo_cards.svg" alt="Ultragamer Card Back" class="back-logo">
             </div>
             <div class="card-face card-front">
-                ${data.svg}
+                <img src="${data.src}" alt="${data.id}" class="card-icon-img">
             </div>
         `;
         wrapper.appendChild(card);

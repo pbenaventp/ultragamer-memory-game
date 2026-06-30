@@ -335,9 +335,10 @@ body.game-active #game-board {
     padding: 20px;
 }
 
-.card-front svg {
+.card-front svg, .card-icon-img {
     width: 80%;
     height: 80%;
+    object-fit: contain;
     filter: drop-shadow(0 4px 15px rgba(0, 0, 0, 0.5));
 }
 
